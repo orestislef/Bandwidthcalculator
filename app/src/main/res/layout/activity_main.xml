@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/background_main"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/welcomeText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/welcomeText"
+            android:textAlignment="center"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="32sp"
+            android:textStyle="bold"
+            android:background="@drawable/layout_bg" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layoutTime"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/timeText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/time"
+                android:textSize="28sp" />
+
+            <TextView
+                android:id="@+id/timeResult"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="32sp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layoutCalculator"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="8dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/layoutFileSize"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/background_file_size"
+            android:padding="8dp"
+            android:layout_marginBottom="16dp">
+
+
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/layoutFileSizeInput"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="3">
+
+                <EditText
+                    android:id="@+id/fileSizeEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:singleLine="true"
+                    android:imeOptions="flagNoExtractUi"
+                    android:hint="@string/file_size"/>
+
+            </android.support.design.widget.TextInputLayout>
+
+            <RadioGroup
+                android:id="@+id/fileSizeRadioGroup"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/byteRadioButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="onRadioButtonClickedFS"
+                    android:text="@string/byteRadioText" />
+
+                <RadioButton
+                    android:id="@+id/kilobyteRadioButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="onRadioButtonClickedFS"
+                    android:text="@string/kilobyteRadioText" />
+
+                <RadioButton
+                    android:id="@+id/megabyteRadioButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="onRadioButtonClickedFS"
+                    android:text="@string/megabyteRadioButtonText" />
+
+                <RadioButton
+                    android:id="@+id/gigabyteRadioButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="onRadioButtonClickedFS"
+                    android:text="@string/gigabyteRadioButtonText" />
+
+            </RadioGroup>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layoutBandwidth"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="8dp"
+            android:background="@drawable/background_bandwidth">
+
+
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/layouBandwidthInput"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="3">
+
+                <EditText
+                    android:id="@+id/bandwidthEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:singleLine="true"
+                    android:imeOptions="flagNoExtractUi"
+                    android:hint="@string/bandwidth"/>
+
+            </android.support.design.widget.TextInputLayout>
+
+            <RadioGroup
+                android:id="@+id/bandwidthRadioGroup"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/bytepsRadioButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="onRadioButtonClickedBW"
+                    android:text="@string/bytesPsRadioButton" />
+
+                <RadioButton
+                    android:id="@+id/kilobytepsRadioButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="onRadioButtonClickedBW"
+                    android:text="@string/kilobytePsRadioButton" />
+
+                <RadioButton
+                    android:id="@+id/megabytepsRadioButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="onRadioButtonClickedBW"
+                    android:text="@string/megabytePsRadioButton" />
+
+                <RadioButton
+                    android:id="@+id/gigabytepsRadioButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="onRadioButtonClickedBW"
+                    android:text="@string/gigabytePsRadioButton" />
+
+            </RadioGroup>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginTop="8dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageButton
+                    android:id="@+id/benchmark_imageButton"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/speedtest_icon"/>
+
+                <TextView
+                    android:layout_marginLeft="8dp"
+                    android:id="@+id/speedTest_info"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/speedtest_data_info"/>
+
+            </LinearLayout>
+
+            <ImageButton
+                android:layout_gravity="right"
+                android:layout_marginBottom="8dp"
+                android:visibility="gone"
+                android:id="@+id/cancel_benchmark_imageButton"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:background="@drawable/ic_cancel"/>
+
+            <WebView
+                android:layout_gravity="center"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/webview"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</LinearLayout>

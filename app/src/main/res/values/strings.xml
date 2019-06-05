@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">Bandwidth calculator</string>
+    <string name="welcomeText">Bandwidth calculator</string>
+
+    <string name="file_size">File Size </string>
+
+    <string name="byteRadioText">Byte</string>
+    <string name="kilobyteRadioText">kiloByte</string>
+    <string name="megabyteRadioButtonText">MegaByte</string>
+    <string name="gigabyteRadioButtonText">GigaByte</string>
+
+    <string name="bandwidth">Bandwidth</string>
+
+    <string name="bytesPsRadioButton">bps</string>
+    <string name="kilobytePsRadioButton">kbps</string>
+    <string name="megabytePsRadioButton">Mbps</string>
+    <string name="gigabytePsRadioButton">Gbps</string>
+
+    <string name="time">Time: "</string>
+
+    <string name="min_time">Less than a second</string>
+    <string name="max_time">Next Big Bang</string>
+    <string name="calculate">calculate</string>
+
+    <string name="speedtest_data_info">If you tap this icon you will benchmark your internet speed to fill the Bandwidth box on top.\n*If you are on mobile network may cause some data loss</string>
+
+
+</resources>
