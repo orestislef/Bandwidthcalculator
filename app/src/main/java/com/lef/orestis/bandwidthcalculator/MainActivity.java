@@ -29,8 +29,8 @@ public class MainActivity extends AppCompatActivity {
     ImageButton speedTestButton,cancelSpeedTestButton;
 
     LinearLayout timeResultLayout;
-    public static final String URL_SPEEDTEST = "http://94.67.96.91:8080/speedtest/speedtest.html";
-//    public static final String URL_SPEEDTEST = "https://www.speedcheck.org/";
+    public static final String URL_SPEEDTEST = "http://94.67.7.191:8080/speedtest/example-gauges.html";
+//    public static final String URL_SPEEDTEST = "https://speedtest.fdossena/";
 
     public double years = 0, days = 0, hours = 0, minutes = 0, seconds = 0;
 
